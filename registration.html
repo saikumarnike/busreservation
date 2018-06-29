@@ -1,0 +1,254 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SATHYA TRAVELS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Arvo|Chicle|Indie+Flower|Lobster|Press+Start+2P" rel="stylesheet">
+<style>
+body{
+  background: url("https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b09c21ac2a8db55f43f901226be1f901&auto=format&fit=crop&w=752&q=80");
+  margin-top: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.jumbotron {
+  margin:20px;
+  margin-left: 500px;
+    max-width: 500px;
+
+}
+.jumbotron {
+  margin:50px;
+  margin-left: 500px;
+  /* margin-right: 10px; */
+    max-width: 500px;
+    background: rgb(255, 255, 204,0.9)
+}
+
+</style>
+
+<script language="javascript">
+	function firstnameval()
+	{
+		var f=fo.fn.value;
+		var reg_fn=/\W|\d|_/;
+		if(f.length<8)
+		{
+			var x=document.getElementById("first");
+			x.innerHTML="FIRST NAME SHOULD BE MORE THAN 8 CHARACTERS";
+		}
+		if(reg_fn.test(f))
+		{
+			var x=document.getElementById("first");
+			x.innerHTML="FIRST NAME SHOULD HAVE ONLY ALPHABETS";
+		}
+		if(f.length>8)
+		{
+			var x=document.getElementById("first");
+			x.innerHTML="";
+		}
+	}
+	function lastnameval()
+	{
+		var f=fo.ln.value;
+		var reg_fn=/\W|\d|_/;
+		if(f.length<8)
+		{
+			var x=document.getElementById("last");
+			x.innerHTML="LAST NAME SHOULD BE MORE THAN 8 CHARACTERS";
+		}
+		if(reg_fn.test(f))
+		{
+			var x=document.getElementById("last");
+			x.innerHTML="LAST NAME SHOULD HAVE ONLY ALPHABETS";
+		}
+		if(f.length>8)
+		{
+			var x=document.getElementById("last");
+			x.innerHTML="";
+		}
+	}
+	function usernameval()
+	{
+		var f=fo.un.value;
+		var reg_un=/\d/;
+		var reg_un1=/[a-z]|[A-Z]/;
+		var reg_un2=/_/;
+		if(f.length<8)
+		{
+			var x=document.getElementById("user");
+			x.innerHTML="USER NAME SHOULD BE MORE THAN 8 CHARACTERS";
+		}
+		if(!(reg_un.test(f)&&reg_un1.test(f)&&reg_un2.test(f)))
+		{
+			var x=document.getElementById("user");
+			x.innerHTML="USER NAME SHOULD CONTAIN ALPHANUMERICS AND _";
+		}
+		if((reg_un.test(f)&&reg_un1.test(f)&&reg_un2.test(f)))
+		{
+			var x=document.getElementById("user");
+			x.innerHTML="";
+		}
+	}
+	function passwordval()
+	{
+		var f=fo.pw.value;
+		if(f.length<8)
+		{
+			var x=document.getElementById("password");
+			x.innerHTML="PLEASE ENTER MORE THAN 8 CHARACTERS";
+		}
+		if(f.length>8)
+		{
+			var x=document.getElementById("password");
+			x.innerHTML="";
+		}
+	}
+	function postalval()
+	{
+		var f=fo.pc.value;
+		var reg_pc=/[0-9]/;
+		var reg_fd=/\D/;
+		if(f.length!=6)
+		{
+			var x=document.getElementById("postal");
+			x.innerHTML="ENTER VALID POSTAL CODE";
+		}
+		if((reg_fd.test(f)))
+		{
+			var x=document.getElementById("postal");
+			x.innerHTML="POSTAL CODE CONTAINS ONLY NUMERICS";
+		}
+		if((reg_pc.test(f))&&(f.length==6))
+		{
+			var x=document.getElementById("postal");
+			x.innerHTML="";
+		}
+
+	}
+	function mobval()
+	{
+		var f=fo.mn.value;
+		var reg_pc=/\d/;
+		if(f.length!=10)
+		{
+			var x=document.getElementById("mob");
+			x.innerHTML="ENTER VALID MOBILE NUMBER";
+		}
+		if(!(reg_pc.test(f)))
+		{
+			var x=document.getElementById("mob");
+			x.innerHTML="MOBILE NUMBER CONTAINS ONLY NUMERICS";
+		}
+
+	}
+	function mailvalidate()
+{
+  var u=fo.t7.value;
+  var re_un1=/\d/;
+  var re_un2=/[a-z]|[A-z]/;
+  var re_un3=/_/;
+  var re_un4=/@|./
+  if(!(re_un2.test(u)&&re_un4.test(u)))
+  {
+      var x=document.getElementById("mail");
+	  x.innerHTML="email name should have only alphanumerics,_,@ and .";
+  }
+}
+function validate()
+{
+   var flag=0;
+   var f=fo.fn.value;
+   var l=fo.ln.value;
+   var u=fo.un.value;
+   var p=fo.pw.value;
+   var po=fo.pc.value;
+   var mn=fo.mn.value;
+   if(f=="" || l=="" || u=="" || p=="" || po=="" || mn=="")
+   {
+    alert("Please Fill all the details");
+    flag=1;
+   }
+   if(flag==0)
+   {
+    document.writeln("<html><body bgcolor=cyan>Welcome "+f+"  "+l+" </body></html>");
+   }
+}
+
+</script>
+
+</head>
+
+
+
+
+<body>
+
+<div class="jumbotron" align="center">
+<form name=fo class="" action="store.php" method="post">
+<fieldset>
+<legend>REGISTRATION DETAILS</legend>
+
+<center>
+
+<table>
+<tr>
+<td>First Name:</td><td><input type="text" placeholder="first name" name=fn  class="form-control" required onblur="firstnameval()">
+<span id="first" style="color:red">
+</span>
+</td>
+</tr>
+<tr>
+<td>Last Name:</td><td><input type="text" name=ln placeholder="last name"  class="form-control" required onblur="lastnameval()">
+<span id="last" style="color:red">
+</span>
+</td>
+</tr>
+<tr>
+<td>User Name:</td><td><input type="text" name=un placeholder="user name"  class="form-control" required onblur="usernameval()">
+<span id="user" style="color:red">
+</span>
+</td>
+</tr>
+<tr>
+<td>Password:</td><td><input type="password" placeholder="password"  class="form-control" name=pw required onblur="passwordval()">
+<span id="password" style="color:red">
+</span></td>
+</tr>
+<tr>
+<td>Enter DOB</td>
+<td><input type="text" id="dob" placeholder="dd-mm-yyyy"  class="form-control"  onblur="dobval()"></td>
+</tr>
+<tr>
+<td>Postal Code:</td><td><input type="text" name=pc class="form-control"  placeholder="postal code" required onblur="postalval()">
+<span id="postal" style="color:red">
+</span>
+</td>
+</tr>
+<tr>
+<td>Mobile No:</td><td><input type="text" name=mn  class="form-control" placeholder="mobile no" required onblur="mobval()">
+<span id="mob" style="color:red">
+</span>
+</td>
+</tr>
+<tr><td>Email:</td><td><input type="text" name="t7" class="form-control"  required placeholder="email id" onblur="mailvalidate()"><span id="mail" style="color:red"></span></td>
+</tr>
+
+</table>
+<input type="submit" class="btn btn-default navbar-btn" name="submit" value="submit">
+<input type="reset" class="btn btn-default navbar-btn" value="reset">
+
+</center>
+</fieldset>
+</form>
+
+
+  </div>
+</body>
+</html>

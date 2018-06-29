@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>LOGIN</title>
+	<meta charset="utf-8">
+    <title>SATHYA TRAVELS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Arvo|Chicle|Indie+Flower|Lobster|Press+Start+2P" rel="stylesheet">
+<style>
+body{
+  background: url("https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b09c21ac2a8db55f43f901226be1f901&auto=format&fit=crop&w=752&q=80");
+  margin-top: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.jumbotron {
+  margin:20px;
+  margin-left: 500px;
+    max-width: 500px;
+
+}
+.jumbotron {
+  margin:50px;
+  margin-left: 500px;
+  /* margin-right: 10px; */
+    max-width: 500px;
+    background: rgb(255, 255, 204,0.9)
+}
+</style>
+</head>
+<body>
+	<div class="jumbotron" align="center">
+<form action="loginsuccess.php" method="POST">
+<table>
+<tr>
+<td>User Name:</td><td><input type="text" name=un placeholder="user name"  class="form-control" required >
+<span id="user" style="color:red">
+</span>
+</td>
+</tr>
+<tr>
+<td>Password:</td><td><input type="password" placeholder="password"  class="form-control" name=pw required >
+<span id="password" style="color:red">
+</span></td>
+</tr>
+
+</table>
+<center><input type="submit" class="btn btn-default navbar-btn" value="login" name='submit'>
+</form>
+</div>
+</body>
+</html>
